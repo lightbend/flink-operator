@@ -1,0 +1,28 @@
+operatorImageName: lyft/flinkk8soperator
+operatorVersion: v0.3.0
+imagePullPolicy: IfNotPresent
+
+rbac:
+  create: true
+
+flinkJobNamespace: default
+
+# Comma separated list of namespaces that the operator is configured to watch
+# Empty string by default, which indicates all namespaces will be watched
+namespacesToWatch: ""
+
+serviceAccounts:
+  flink:
+    create: true
+    name:
+  flinkoperator:
+    create: true
+    name:
+
+resourceRequests:
+  memory: 1G
+  cpu: 0.5
+
+resourceLimits:
+  memory: 1G
+  cpu: 2
