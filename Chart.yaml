@@ -1,7 +1,7 @@
 name: flink-operator
 description: A Helm chart for Flink operator
-version: 0.7.1
-appVersion: 0.3.0
+version: 0.8.0
+appVersion: 0.4.0
 apiVersion: v1
 kubeVersion: ">=1.10.0-0"
 keywords:

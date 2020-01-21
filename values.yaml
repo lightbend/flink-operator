@@ -1,5 +1,5 @@
-operatorImageName: lightbend/flinkk8soperator
-operatorVersion: v0.3.0
+operatorImageName: lyft/flinkk8soperator
+operatorVersion: v0.4.0
 imagePullPolicy: IfNotPresent
 
 rbac:

@@ -8,8 +8,8 @@ The following table lists the configurable parameters of the chart and their def
 
 | Parameter                              | Description                                                  | Default                      |
 | -------------------------------------- | ------------------------------------------------------------ | ---------------------------- |
-| `operatorImageName`                    | The name of the operator image                               | `lightbend/flinkk8soperator` |
-| `operatorVersion`                      | The version of the operator to install                       | `0.3.0`                      |
+| `operatorImageName`                    | The name of the operator image                               | `lyft/flinkk8soperator`      |
+| `operatorVersion`                      | The version of the operator to install                       | `0.4.0`                      |
 | `imagePullPolicy`                      | Docker image pull policy                                     | `IfNotPresent`               |
 | `flinkJobNamespace`                    | K8s namespace where Flink jobs are to be deployed.           | `default`                    |
 | `limitNamespace`                       | Comma separated list of namespaces that the operator is configured to watch. Empty string by default, which indicates all namespaces will be watched. | ""                           |
