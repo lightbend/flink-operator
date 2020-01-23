@@ -40,13 +40,13 @@ spec:
                 properties:
                   name:
                     type: string
+            serviceAccountName:
+              type: string
             jarName:
               type: string
             programArgs:
               type: string
             entryClass:
-              type: string
-            serviceAccountName:
               type: string
             flinkVersion:
               type: string
@@ -89,6 +89,11 @@ spec:
               properties:
                 savepointLocation:
                   type: string
+            savepointPath:
+              type: string
+            maxCheckpointRestoreAgeSeconds:
+              type: integer
+              minimum: 1
             jobManagerConfig:
               type: object
               properties:
@@ -97,6 +102,8 @@ spec:
                   minimum: 1
                 offHeapMemoryFraction:
                   type: number
+                  minimum: 0
+                  maximum: 1
                 nodeSelector:
                   type: object
                   properties:
@@ -222,6 +229,8 @@ spec:
                   minimum: 1
                 offHeapMemoryFraction:
                   type: number
+                  minimum: 0
+                  maximum: 1
                 nodeSelector:
                   type: object
                   properties:
@@ -373,7 +382,8 @@ spec:
             - jarName
             - parallelism
             - entryClass
-
+  subresources:
+    status: {}
   additionalPrinterColumns:
     - name: Phase
       type: string
